@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // ------------------------------------------------------
 
     const IMAGES = {
-        viejito: "Imagenes/viejo.jpeg",
-        vualaUno:"Imagenes/vuala-1.jpeg",
-        vualaDos: "Imagenes/vuala-2.jpeg",
-        mensajeApoyo: "Imagenes/mensaje.jpeg"
+        viejito: "viejo.jpeg",
+        vualaUno:"vuala-1.jpeg",
+        vualaDos: "vuala-2.jpeg",
+        mensajeApoyo: "mensaje.jpeg"
     };
 
     // ------------------------------------------------------
