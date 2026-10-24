@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050816">
+    <title>Un universo para ti 💙</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="universe-page">
+
+    <main class="universe" id="universe">
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+        <div class="nebula nebula-three"></div>
+        <div class="star-field" id="starField" aria-hidden="true"></div>
+
+        <div class="floating-words" aria-hidden="true">
+            <span>hogar</span>
+            <span>confianza</span>
+            <span>cuidado</span>
+            <span>apoyo</span>
+            <span>💙</span>
+        </div>
+
+        <header class="universe-header">
+            <span class="header-star">✦</span>
+            <span>un pequeño universo</span>
+            <span class="header-star">✦</span>
+        </header>
+
+        <nav class="side-navigation" aria-label="Navegación del universo">
+            <button class="nav-button active" data-action="home"
+                    aria-label="Volver al universo" title="Universo">
+                <span>✧</span>
+            </button>
+            <button class="nav-button" data-action="discover"
+                    aria-label="Buscar una estrella secreta" title="Descubrir">
+                <span>✦</span>
+            </button>
+            <button class="nav-button" data-action="memories"
+                    aria-label="Ver indicación de recuerdos" title="Recuerdos">
+                <span>☄</span>
+            </button>
+        </nav>
+
+        <section class="cosmos" aria-label="Planetas y estrellas">
+            <div class="cosmos-center" aria-hidden="true">
+                <div class="center-glow"></div>
+                <div class="center-orbit orbit-one"></div>
+                <div class="center-orbit orbit-two"></div>
+                <div class="center-star">✦</div>
+                <div class="center-caption">un lugar entre las estrellas</div>
+            </div>
+
+            <!-- PLANETA 1: HOGAR -->
+            <button class="planet planet-home" data-planet="hogar"
+                    aria-label="Explorar el planeta Hogar">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+                <span class="planet-moon"></span>
+            </button>
+
+            <!-- PLANETA 2: DONDE SE CONOCIERON -->
+            <button class="planet planet-store" data-planet="tienda"
+                    aria-label="Explorar el planeta Donde nos conocimos">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+            </button>
+
+            <!-- PLANETA 3: CARIÑO -->
+            <button class="planet planet-affection" data-planet="carino"
+                    aria-label="Explorar el planeta Mi cariño">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+                <span class="planet-moon"></span>
+            </button>
+
+            <!-- PLANETA 4: VIEJITO -->
+            <button class="planet planet-viejito" data-planet="viejito"
+                    aria-label="Explorar el planeta Viejito">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+            </button>
+
+            <!-- PLANETA 5: VUALÁ, SEPARADO DE VIEJITO -->
+            <button class="planet planet-vuala" data-planet="vuala"
+                    aria-label="Explorar el planeta Vualá">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+                <span class="planet-moon"></span>
+            </button>
+
+            <!-- PLANETA 6: ACOMPAÑAMIENTO -->
+            <button class="planet planet-support" data-planet="acompanamiento"
+                    aria-label="Explorar el planeta Ya no estás solito">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+            </button>
+
+            <!-- PLANETA 7: ORGULLO -->
+            <button class="planet planet-pride" data-planet="orgullo"
+                    aria-label="Explorar el planeta Mi orgullo">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+            </button>
+
+            <!-- PLANETA 8: CANCIÓN -->
+            <button class="planet planet-song" data-planet="eqytqat"
+                    aria-label="Explorar el planeta EQYTQAT">
+                <span class="planet-glow"></span>
+                <span class="planet-body"></span>
+                <span class="planet-ring"></span>
+            </button>
+
+            <!-- ESTRELLAS CON RECUERDOS -->
+            <button class="memory-star hug-star-one" data-planet="abrazo"
+                    aria-label="Recordar el primer abrazo">✦</button>
+            <button class="memory-star hug-star-two" data-planet="abrazo"
+                    aria-label="Recordar los abrazos">✧</button>
+
+            <button class="memory-star vision-star" data-planet="como-te-veo"
+                    aria-label="Como yo te veo">✧</button>
+
+            <button class="memory-star support-star"
+                    data-planet="mensaje-apoyo"
+                    aria-label="Abrir el mensaje de apoyo">✦</button>
+
+            <!-- ESTRELLAS SECRETAS -->
+            <button class="memory-star secret-star secret-one" data-secret="0"
+                    aria-label="Descubrir una frase secreta">✧</button>
+            <button class="memory-star secret-star secret-two" data-secret="1"
+                    aria-label="Descubrir otra frase secreta">✦</button>
+            <button class="memory-star secret-star secret-three" data-secret="2"
+                    aria-label="Descubrir una tercera frase secreta">✧</button>
+        </section>
+
+        <div class="planet-tooltip" id="planetTooltip" role="status"
+             aria-live="polite"></div>
+
+        <div class="toast-message" id="toastMessage" role="status"
+             aria-live="polite"></div>
+
+        <!-- CONTENIDO: SE ABRE SOBRE EL UNIVERSO -->
+        <section class="detail-overlay" id="detailOverlay"
+                 aria-hidden="true">
+            <article class="detail-panel" role="dialog"
+                     aria-modal="true" aria-labelledby="detailTitle">
+                <button class="close-detail" id="closeDetail"
+                        aria-label="Cerrar y regresar al universo">✕</button>
+
+                <div class="detail-decoration" aria-hidden="true">✦ · ✧ · ✦</div>
+                <p class="detail-eyebrow" id="detailEyebrow"></p>
+                <h1 id="detailTitle">Un recuerdo</h1>
+                <div class="detail-content" id="detailContent"></div>
+
+                <button class="return-button" id="returnButton">
+                    Volver a las estrellas ✧
+                </button>
+            </article>
+        </section>
+
+        <!--
+            MÚSICA:
+            Guarda tu canción en assets/audio/.
+            Si tiene otro nombre, cambia el valor de src.
+            El reproductor permanece aquí mientras cambias de planeta.
+        -->
+        <audio id="mainAudio" loop preload="metadata">
+            <source src="te-quiero-tanto.mpeg" type="audio/mpeg">
+            Tu navegador no puede reproducir este audio.
+        </audio>
+
+        <footer class="music-player" aria-label="Reproductor de música">
+            <div class="music-symbol" aria-hidden="true">♫</div>
+
+            <div class="music-information">
+                <span class="music-title">Te Quiero Tanto</span>
+                <span class="music-artist">Kevin Kaarl · para este universo</span>
+                <span class="music-status" id="musicStatus">Lista para reproducir</span>
+            </div>
+
+            <label class="volume-control" title="Volumen">
+                <span aria-hidden="true">♪</span>
+                <input id="volumeControl" type="range"
+                       min="0" max="1" step="0.05" value="0.65"
+                       aria-label="Volumen de la música">
+            </label>
+
+            <button class="music-button" id="playPauseButton"
+                    aria-label="Reproducir música" title="Reproducir o pausar">
+                <span id="playPauseIcon">▶</span>
+            </button>
+        </footer>
+    </main>
+</body>
+</html>
